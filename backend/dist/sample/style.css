@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+:root{
+    --reder:red;
+    --inputcolor:orangered;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    box-shadow: 0px 10px 5px rgb(0, 0, 0,0.1);
+}
+.breaker{
+    width: 100%;
+    height: 30px;
+}
+.nav1{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 600px;
+    background: rgb(191, 241, 225);
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+}
+.searchbar i{
+    font-size: 20px;
+    color: rgb(138, 123, 123);
+}
+.searchbar input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    background: transparent;
+}
+.nav1 ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 12px;
+}
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.menubtn{
+  
+      align-items: center;
+}
+.categories1{
+    height: 100px;
+    padding: 0px 40px;
+    box-shadow: 10px 10px 5px rgb(0, 0, 0,0.1);
+}
+.category-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.category-item{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.category-item p{
+    text-align: center;
+}
+.banner-container{
+    padding: 0 20px;
+    width: 100%;
+
+}
+.banner{
+    width: 100%;
+    overflow:hidden ;
+}
+.product-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.product-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0,0.1);
+    margin: 10px 0px;
+}
+.product-card .heart{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+
+}
+.product-card img{
+    width: 100%;
+}
+.butttons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button{
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    background: rgb(12, 96, 221);
+    color: white;
+    border-radius: 5px;
+    
+}
+.buttons button i{
+    color: white
+}
+.footer{
+    background: gray;
+    height: 150px;
+}
+.auth-body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+.auth-body img{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 7px rgb(0, 0, 0,0.1);
+    background: transparent; 
+    backdrop-filter: blur(16px);
+    border: 1px solid rgb(75, 113, 238);
+}
+
+.auth-container h1{
+    
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+.input-field{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin: 7px 0px;
+}
+.input-field input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px 20px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+.input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus {
+    border: 2px solid var(--inputcolor);
+}
+input:focus + label {
+    top: -15px;
+    padding: 0 2px ;
+    border-left:1px solid var(--inputcolor);
+    border-right:1px solid var(--inputcolor);
+    background-color: var(--inputcolor);
+    color: white;
+
+}
+.terms{
+    display: flex;
+    gap: 5px;
+}
+
+
+.auth-container button{
+    padding: 8px 10px;
+    color: white;
+    background: orangered;
+    border: none;
+    outline: none;
+
+}
+
+@media screen and (max-width:768px) {
+    .searchbar{
+        display: none;
+    }
+}
+@media screen and (max-width:476px) {
+    
+}
