@@ -10,7 +10,7 @@ export const getAdminUser=async dispatch=>{
     
     try{
         dispatch(getAdminUserRequest())
-        const {data}=await axios.get('https://newmernapp.onrender.com/api/v1/admin/user')
+        const {data}=await axios.get('/api/v1/admin/user')
         console.log(data)
             dispatch(getAdminUserSuccess(data))
         }
@@ -23,7 +23,7 @@ export const getAdminUserDetail=id=>async dispatch=>{
 
         try{
             dispatch(getAdminUserDetailRequest())
-            const {data}=await axios.get(`https://newmernapp.onrender.com/api/v1/admin/user/${id}`)
+            const {data}=await axios.get(`/api/v1/admin/user/${id}`)
             dispatch(getAdminUserDetailSuccess(data))
         }
         catch(err){
@@ -35,7 +35,7 @@ export const getAdminUserDetail=id=>async dispatch=>{
         
         try{
             dispatch(updateAdminUserRequest())
-            const {data}=await axios.put(`https://newmernapp.onrender.com/api/v1/admin/user/${id}`,userData)
+            const {data}=await axios.put(`/api/v1/admin/user/${id}`,userData)
             dispatch(updateAdminUserSuccess())
         }
         catch(err){
@@ -48,7 +48,7 @@ export const getAdminDelete=id=>async dispatch=>{
 
         try{
             dispatch(deleteAdminUserRequest())
-            await axios.delete(`https://newmernapp.onrender.com/api/v1/admin/user/${id}`)
+            await axios.delete(`/api/v1/admin/user/${id}`)
             dispatch(deleteAdminUserSuccess())
         }
         catch(err){
