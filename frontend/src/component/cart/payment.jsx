@@ -46,7 +46,7 @@ export default function payment(){
         document.querySelector('#payment-btn').disabled=true
         try{
             
-            const {data}=await axios.post('/api/v1/payment/process',processData)
+            const {data}=await axios.post('https://newmernapp.onrender.com/api/v1/payment/process',processData)
             
             result=await stripe.confirmCardPayment(data.client_secret,{
                 payment_method:{

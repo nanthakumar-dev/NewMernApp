@@ -4,7 +4,7 @@ const path=require('path')
 const dotenv=require('dotenv');
 
 createDatabase()
-const server=app.listen(process.env.PORT,()=>{
+const server=app.listen(8000,()=>{
     console.log(`Server Started At ${process.env.PORT} in ${process.env.NODE_ENV} `)
 })
 

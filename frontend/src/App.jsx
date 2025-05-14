@@ -41,7 +41,7 @@ function App() {
   const dispatch=useDispatch()
   const [stripeApi,setStripeApi]= useState('')
   const stripeKey=async()=>{
-    const {data}=await axios.get('/api/v1/payment/api')
+    const {data}=await axios.get('https://newmernapp.onrender.com/api/v1/payment/api')
     setStripeApi(data.stripApiKey)
   }
   useEffect(()=>{
