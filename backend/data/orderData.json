@@ -1,0 +1,51 @@
+[
+    {
+        "shippingInfo":{
+            "address":"5,MSK Street,Therbogi,Rmd",
+            "country":"India",
+            "city":"Ramanathapuram",
+            "phoneNo":"704778908",
+            "postalCode":"623522"
+        },
+        
+        "orderItems":[{
+            "product":"680dc42cd02e8ef31ddee945",
+            "name":"Oppo F21s Pro 5G",
+            "price":245.00,
+            "quantity":2,
+            "image":"image1.jpg"
+        },
+        {
+            "product":"680dc42cd02e8ef31ddee94a",
+            "name":"Dell Inspiron 3511 Laptop",
+            "price":500.00,
+            "quantity":3,
+            "image":"image2.jpg"
+        }
+        ],
+        "itemsPrice":245.00,
+        "taxPrice":5.00,
+        "shippingPrice":50.00
+    },
+    {
+        "shippingInfo":{
+            "address":"10,Gandi Road,chennai",
+            "country":"India",
+            "city":"chennai",
+            "phoneNo":"9626954002",
+            "postalCode":"623522"
+        },
+        
+        "orderItems":[
+        {
+            "product":"680dc42cd02e8ef31ddee94a",
+            "name":"Dell Inspiron 3511 Laptop",
+            "price":500.00,
+            "quantity":3,
+            "image":"image2.jpg"
+        }
+        ],
+        "taxPrice":5.00,
+        "shippingPrice":50.00
+    }
+]
