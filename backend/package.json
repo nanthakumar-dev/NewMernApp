@@ -8,6 +8,8 @@
     "start": "nodemon server.js",
     "dev": "set NODE_ENV=development&&nodemon server.js",
     "prod": "set NODE_ENV=production&&nodemon server.js",
+    "pro": "set NODE_ENV=production&&node server.js",
+    "production": "node server.js",
     "seeder": "node Utils/seeder.js",
     "userSeeder": "node Utils/userSeeder.js"
   },
