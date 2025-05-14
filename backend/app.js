@@ -23,14 +23,14 @@ app.use('/api/v1',userRoute)
 app.use('/api/v1',orderRoute)
 app.use('/api/v1',paymentRoute)
 
-if(process.env.NODE_ENV==='production'){
+
     console.log("good")
     console.log("bad",path.join(__dirname,'../frontend/dist'))
     app.use(express.static(path.join(__dirname,'../frontend/dist')))
     app.get("*",(req,res)=>{
         res.sendFile(path.resolve(__dirname,"../frontend/dist/index.html"))
     })
-}
+
 
 app.use(errorMiddleware)
 
