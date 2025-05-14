@@ -1,17 +1,18 @@
 import { Fragment, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import {ToastContainer} from "react-toastify"
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { loadUser } from './actions/authAction'
 import './App.css'
 import Header from './component/layout/Header'
 import Footer from './component/layout/Footer'
 import Home from './component/layout/Home'
+
 import ProductDetail from './component/product/productDetail'
-import {ToastContainer} from "react-toastify"
 import Search from './component/layout/search'
 import Login from './component/user/Login'
 import Register from './component/user/Register'
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { loadUser } from './actions/authAction'
 import Profile from './component/user/profile'
 import ProfileUpdate from './component/user/profileUpdate'
 import PasswordChange from './component/user/passwordChange'
@@ -39,6 +40,7 @@ import UpdateUser from './component/admin/updateUser'
 
 function App() {
   const dispatch=useDispatch()
+  
   const [stripeApi,setStripeApi]= useState('')
   const stripeKey=async()=>{
     const {data}=await axios.get('https://newmernapp.onrender.com/api/v1/payment/api')
@@ -49,12 +51,16 @@ function App() {
     stripeKey()
 
   },[dispatch])
+  
   return (
     <Router>
       <Header />
       <ToastContainer theme="dark"/>
       <Routes>
         <Route path='/' element={<Home />} />
+        
+          
+          
         <Route path='/product/:id' element={<ProductDetail/>} />
         <Route path='/search' element={<Search/>} />
         <Route path='/login' element={<Login/>} />
@@ -83,6 +89,8 @@ function App() {
         <Route path='/admin/order/update/:id' element={<ProtectedRoute isAdmin={true}><UpdateOrder/></ProtectedRoute>} />
         <Route path='/admin/user' element={<ProtectedRoute isAdmin={true}><UserAdmin/></ProtectedRoute>} />
         <Route path='/admin/user/update/:id' element={<ProtectedRoute isAdmin={true}><UpdateUser/></ProtectedRoute>} />
+        
+          
         
       </Routes>
       <Footer />
