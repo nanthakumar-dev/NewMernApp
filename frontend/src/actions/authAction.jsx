@@ -10,7 +10,7 @@ import {
 export const login=(email,password)=> async(dispatch)=>{
     try{
         dispatch(loginRequest())
-        const {data}= await axios.post('/api/v1/login',{email,password})
+        const {data}= await axios.post('https://newmernapp.onrender.com/api/v1/login',{email,password})
        console.log(data)
        dispatch(loginSuccess(data))
     }
@@ -28,7 +28,7 @@ export const register=(userData)=> async(dispatch)=>{
             }
         }
         dispatch(registerRequest())
-        const {data}= await axios.post('/api/v1/register',userData,config)
+        const {data}= await axios.post('https://newmernapp.onrender.com/api/v1/register',userData,config)
        console.log(data)
        dispatch(registerSuccess(data))
     }
@@ -43,7 +43,7 @@ export const clearAuthErr=dispatch=>{
 export const logout=async (dispatch)=>{
     try{
         dispatch(logoutRequest())
-        await axios.get('/api/v1/logout')
+        await axios.get('https://newmernapp.onrender.com/api/v1/logout')
         dispatch(logoutSuccess())
     }
     catch(err){
@@ -54,7 +54,7 @@ export const logout=async (dispatch)=>{
 export const loadUser=async (dispatch)=>{
     try{
         dispatch(loadUserRequest())
-        const {data}=await axios.get('/api/v1/myprofile')
+        const {data}=await axios.get('https://newmernapp.onrender.com/api/v1/myprofile')
         console.log(data)
         dispatch(loadUserSuccess(data))
     }
@@ -67,7 +67,7 @@ export const changePassword=(oldPassword,password)=> async(dispatch)=>{
     try{
         dispatch(changePasswordRequest())
         console.log("Hell",oldPassword,password)
-        const {data}= await axios.put('/api/v1/password/change',{oldPassword,password})
+        const {data}= await axios.put('https://newmernapp.onrender.com/api/v1/password/change',{oldPassword,password})
        console.log(data)
        dispatch(changePasswordSuccess(data))
     }
@@ -79,7 +79,7 @@ export const changePassword=(oldPassword,password)=> async(dispatch)=>{
 export const updateProfile=(formData)=> async(dispatch)=>{
     try{
         dispatch(updateProfileRequest())
-        const {data}= await axios.put('/api/v1/update',formData)
+        const {data}= await axios.put('https://newmernapp.onrender.com/api/v1/update',formData)
        console.log(data)
        dispatch(updateProfileSuccess(data))
     }
@@ -91,7 +91,7 @@ export const updateProfile=(formData)=> async(dispatch)=>{
 export const forgotPassword=(email)=> async(dispatch)=>{
     try{
         dispatch(forgotPasswordRequest())
-        const {data}= await axios.post('/api/v1/password/forgot',{email})
+        const {data}= await axios.post('https://newmernapp.onrender.com/api/v1/password/forgot',{email})
        console.log(data)
        dispatch(forgotPasswordSuccess(data))
     }
@@ -103,7 +103,7 @@ export const forgotPassword=(email)=> async(dispatch)=>{
 export const resetPassword=(token,password,confirmPassword)=> async(dispatch)=>{
     try{
         dispatch(resetPasswordRequest())
-        const {data}= await axios.post(`/api/v1/password/reset/${token}`,{password,confirmPassword})
+        const {data}= await axios.post(`https://newmernapp.onrender.com/api/v1/password/reset/${token}`,{password,confirmPassword})
        console.log(data)
        dispatch(resetPasswordSuccess(data))
     }

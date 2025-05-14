@@ -3,7 +3,7 @@ import { addCartItem } from "../slices/cartSlice"
 
 export const addCartItems=(id,quantity)=>async dispatch=>{
 
-    const {data}=await axios.get(`/api/v1/product/${id}`)
+    const {data}=await axios.get(`https://newmernapp.onrender.com/api/v1/product/${id}`)
     
     dispatch(addCartItem(
         {

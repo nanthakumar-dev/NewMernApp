@@ -13,7 +13,7 @@ export const getProducts=(page,search,category)=>async(dispatch)=>{
     try{
         console.log("Search",search)
         dispatch(productsRequest())
-        let link= `/api/v1/product?page=${page}`
+        let link= `https://newmernapp.onrender.com/api/v1/product?page=${page}`
         console.log("Search",search)
         if(search){
             if(search.trim()!==""){
@@ -38,7 +38,7 @@ export const getSingleProduct=id=>async(dispatch)=>{
         console.log(id)
         dispatch(productRequest())
         
-        const {data} = await axios.get(`/api/v1/product/${id}`)
+        const {data} = await axios.get(`https://newmernapp.onrender.com/api/v1/product/${id}`)
         dispatch(productSuccess(data.product))
     }
     catch(err){
@@ -51,7 +51,7 @@ export const addReview=review=>async(dispatch)=>{
         
         dispatch(addReviewRequest())
         
-        const {data} = await axios.put(`/api/v1/review`,review)
+        const {data} = await axios.put(`https://newmernapp.onrender.com/api/v1/review`,review)
         dispatch(addReviewSuccess(data.product))
     }
     catch(err){
@@ -63,7 +63,7 @@ export const getAllProduct=async(dispatch)=>{
     try{
         
         dispatch(adminProductRequest())
-        const {data} = await axios.get(`/api/v1/admin/product`)
+        const {data} = await axios.get(`https://newmernapp.onrender.com/api/v1/admin/product`)
         dispatch(adminProductSuccess(data))
     }
     catch(err){
@@ -74,7 +74,7 @@ export const createNewProduct=formData=>async(dispatch)=>{
     try{
         
         dispatch(createProductRequest())
-        const {data} = await axios.post(`/api/v1/product/new`,formData)
+        const {data} = await axios.post(`https://newmernapp.onrender.com/api/v1/product/new`,formData)
         dispatch(createProductSuccess(data))
     }
     catch(err){
@@ -85,7 +85,7 @@ export const deleteProduct=id=>async(dispatch)=>{
     try{
         
         dispatch(deleteProductRequest())
-        const {data} = await axios.delete(`/api/v1/admin/product/${id}`)
+        const {data} = await axios.delete(`https://newmernapp.onrender.com/api/v1/admin/product/${id}`)
         dispatch(deleteProductSuccess(data))
     }
     catch(err){
@@ -97,7 +97,7 @@ export const updateProduct=(id,formData)=>async(dispatch)=>{
         console.log(id)
         console.log(formData)
         dispatch(updateProductRequest())
-        const {data} = await axios.put(`/api/v1/admin/product/${id}`,formData)
+        const {data} = await axios.put(`https://newmernapp.onrender.com/api/v1/admin/product/${id}`,formData)
         dispatch(updateProductSuccess(data))
     }
     catch(err){
