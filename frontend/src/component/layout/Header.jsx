@@ -96,7 +96,7 @@ export default function Header() {
                     <Link style={{color:'black'}} to={'/cart'}>
                         <li ><i className="fa-solid fa-cart-shopping"></i><span>Cart</span></li>
                     </Link>
-                    <li><i className="fa-solid fa-shop"></i><span>Become a Seller</span></li>
+                    
                 </ul>
                 
                 <div className="menubtn d-flex">
